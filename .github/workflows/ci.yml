@@ -13,6 +13,6 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
     - name: Build
-      run: dotnet build src/CsharpPowerView/CsharpPowerView.csproj --configuration Release
+      run: dotnet build src/BlazorUISyncManager/BlazorUISyncManager.csproj --configuration Release
     - name: Test
-      run: dotnet test src/CsharpPowerView/CsharpPowerView.csproj --configuration Release --no-build
+      run: dotnet test src/BlazorUISyncManager/BlazorUISyncManager.csproj --configuration Release --no-build
