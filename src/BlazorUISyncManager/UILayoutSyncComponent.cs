@@ -26,10 +26,10 @@ namespace NexusNetworkCloud.BlazorUISyncManager
 
         public void Dispose() => uiSyncDisposer?.Dispose();
 
-        public void OnCompleted() => throw new NotImplementedException();
+        public virtual void OnCompleted() => throw new NotImplementedException();
 
-        public void OnError(Exception error) => throw new NotImplementedException();
+        public virtual void OnError(Exception error) => throw new NotImplementedException();
 
-        public async void OnNext(UISyncEvent value) => await InvokeAsync(StateHasChanged);
+        public virtual async void OnNext(UISyncEvent value) => await InvokeAsync(StateHasChanged);
     }
 }
